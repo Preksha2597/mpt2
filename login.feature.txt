@@ -1,0 +1,26 @@
+#Author Preksha Mendiratta 
+Feature :login
+this feature is about verifying login credentials 
+
+Scenario: Customer is trying to login with his credentials 
+Given  customer is on login page
+ When   he enters mail with a  wrong password  
+ Then  message is displayed 'something is wrong, pleae try with correct user mail & password'
+
+ When customer enters with invalid mail
+ Then 'this mail is not registered, please sign up first' message is displayed
+ 
+ When customer enters correct credentials 
+ Then 'login successful' message is displayed 
+
+Scenario: Merchant is trying to login with his credentials 
+
+Given  merchant  is on login page
+ When   he enters mail with a  wrong password  
+ Then  message is displayed 'something is wrong, pleae try with correct user mail & password'
+
+ When merchant enters with invalid mail
+ Then 'this mail is not registered, please sign up first' message is displayed
+ 
+ When merchant enters correct credentials 
+ Then 'login successful' message is displayed 
